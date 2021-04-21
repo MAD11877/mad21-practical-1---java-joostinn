@@ -33,29 +33,28 @@ public class Question5
     for(int i = 0; i < number; i++)
     {
       System.out.print("Enter: ");
-      numberArray[i] = in.nextInt();        
+      intArray[i] = in.nextInt();        
     }
     int maxNumber = 0;
     int maxAppearances = 0;
-    for(a = 0; a < intArray.size(); a++)
+    for(int a: intArray)
     {
       int count = 0;
-      for(b = 0 ; b < intArray.size(); b++)
+      for(int b : intArray)
       {
-          if(intArray[a] == intArray[b])
+          if(a == b)
           {
             count += 1;
           }
       }
       if(count > maxAppearances)
       {
-        maxNumber = intArray[a] ;
+        maxNumber = a;
         maxAppearances = count;
       }
     }
 
     System.out.println("Mode : " + maxNumber);
-    
   
   }
 }
