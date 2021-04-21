@@ -26,27 +26,35 @@ public class Question5
      *     2
      * Hint: Use a loop to get input. Use another 2 loops to find the mode
      */
-     Scanner in = new Scanner(System.in);
+    Scanner in = new Scanner(System.in);
+    System.out.print("Number of Integers: ");
     int number = in.nextInt();
-    ArrayList<Integer> intList = new ArrayList<>();
-    int intMost = 0;
-    int most = 0;
-    for(int i = 0; i<number;i++){
-      int integers = in.nextInt();
-      intList.add(integers);
-      int occurence = 0;
-      for(int j = 0; j < intList.size();j++){
-        if (intList.get(i) == integers){
-          occurence++;
-        }
+    int[] intArray= new int[number] ;
+    for(int i = 0; i < number; i++)
+    {
+      System.out.print("Enter: ");
+      numberArray[i] = in.nextInt();        
+    }
+    int maxNumber = 0;
+    int maxAppearances = 0;
+    for(a = 0; a < intArray.size(); a++)
+    {
+      int count = 0;
+      for(b = 0 ; b < intArray.size(); b++)
+      {
+          if(intArray[a] == intArray[b])
+          {
+            count += 1;
+          }
       }
-      if (occurence > most){
-        most = occurence;
-        intMost = integers;
+      if(count > maxAppearances)
+      {
+        maxNumber = intArray[a] ;
+        maxAppearances = count;
       }
     }
-    System.out.println(intMost);
-     
+
+    System.out.println("Mode : " + maxNumber);
     
   
   }
