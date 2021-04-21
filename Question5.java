@@ -27,6 +27,19 @@ public class Question5
      */
      
     Scanner in = new Scanner(System.in);
-    
+    System.out.print("Enter number of integers: ");
+    String[] string = new String [sc.nextInt()];      
+    //consuming the <enter> from input above  
+    sc.nextLine();   
+   for (int i = 0; i < string.length; i++)   
+   {  
+   string[i] = sc.nextLine();  
+   }  
+   System.out.println("\nYou have entered: ");  
+   //for-each loop to print the string  
+   for(String str: string)   
+   {  
+   System.out.println(str);  
+   }            
   }
 }
