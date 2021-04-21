@@ -12,7 +12,7 @@ public class Question3
      
     Scanner in = new Scanner(System.in);
     System.out.print("Enter number: ");
-    int num = in.nextInt()
+    int num = in.nextInt();
     int product = num * num;
     System.out.println("Output: "+product);
     
