@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Question5
 {
@@ -25,21 +26,28 @@ public class Question5
      *     2
      * Hint: Use a loop to get input. Use another 2 loops to find the mode
      */
+     Scanner in = new Scanner(System.in);
+    int number = in.nextInt();
+    ArrayList<Integer> intList = new ArrayList<>();
+    int intMost = 0;
+    int most = 0;
+    for(int i = 0; i<number;i++){
+      int integers = in.nextInt();
+      intList.add(integers);
+      int occurence = 0;
+      for(int j = 0; j < intList.size();j++){
+        if (intList.get(i) == integers){
+          occurence++;
+        }
+      }
+      if (occurence > most){
+        most = occurence;
+        intMost = integers;
+      }
+    }
+    System.out.println(intMost);
      
-    Scanner in = new Scanner(System.in);
-    System.out.print("Enter number of integers: ");
-    String[] string = new String [sc.nextInt()];      
-    //consuming the <enter> from input above  
-    sc.nextLine();   
-   for (int i = 0; i < string.length; i++)   
-   {  
-   string[i] = sc.nextLine();  
-   }  
-   System.out.println("\nYou have entered: ");  
-   //for-each loop to print the string  
-   for(String str: string)   
-   {  
-   System.out.println(str);  
-   }            
+    
+  
   }
 }
