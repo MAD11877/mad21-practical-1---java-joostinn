@@ -9,8 +9,13 @@ public class Question2
      * 
      * Hint: in.nextDouble() to read double
      */
+      Scanner sc = new Scanner(System.in);
+      System.out.print("Input weight in kilogram: ");
+      double weight = sc.nextDouble();
+      System.out.print("\nInput height in meters: ");
+      double height = sc.nextDouble();
+      double BMI = weight / (height * height);
+      System.out.print("\nThe Body Mass Index (BMI) is " + BMI + " kg/m2");
      
-    Scanner in = new Scanner(System.in);
-    double height = in.nextDouble();
   }
 }
