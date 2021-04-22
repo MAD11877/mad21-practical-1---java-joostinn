@@ -27,12 +27,10 @@ public class Question5
      * Hint: Use a loop to get input. Use another 2 loops to find the mode
      */
     Scanner in = new Scanner(System.in);
-    System.out.print("Number of Integers: ");
     int number = in.nextInt();
     int[] intArray= new int[number] ;
     for(int i = 0; i < number; i++)
     {
-      System.out.print("Enter: ");
       intArray[i] = in.nextInt();        
     }
     int maxNumber = 0;
@@ -54,7 +52,7 @@ public class Question5
       }
     }
 
-    System.out.println("Mode : " + maxNumber);
+    System.out.println(maxNumber);
   
   }
 }
