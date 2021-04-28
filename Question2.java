@@ -9,8 +9,13 @@ public class Question2
      * 
      * Hint: in.nextDouble() to read double
      */
+      Scanner sc = new Scanner(System.in);
+    
+      double weight = sc.nextDouble();
+      
+      double height = sc.nextDouble();
+      double BMI = weight / (height * height);
+      System.out.print(BMI);
      
-    Scanner in = new Scanner(System.in);
-    double height = in.nextDouble();
   }
 }
